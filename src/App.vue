@@ -4,9 +4,10 @@
     <form @submit.prevent="addNewTodo">
        <label for="newTodo">New todo</label>
        <input v-model="newTodo" id="newTodo" placeholder="Enter a new task">
-       <button class="add-button">Add New Todo</button>
+       
     </form>
     <div class="actions">
+      <button class="add-button">Add New Todo</button>
       <button @click="removeAllTodos" class="remove-all-button">REMOVE All</button>
       <button @click="markAllDone" class="mark-all-done-button">Mark All Done</button>
     </div>
@@ -86,6 +87,7 @@ form {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  
 }
 
 input {
@@ -94,10 +96,15 @@ input {
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 16px;
+ margin-left: 20px;
 }
 
 input::placeholder {
   color: #aaa;
+}
+
+label{
+  display: block;
 }
 
 button {
